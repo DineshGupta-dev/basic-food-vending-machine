@@ -1,0 +1,172 @@
+package training;
+import java.util.*;
+
+public class menu {
+
+	public static void main(String[] args) {
+		System.out.println("***** FOOD VENDING MACHINE *****");
+		System.out.println("Hi,plz enter your name");
+		int amt,amt2,q;
+		char ch;
+		String name;
+		Scanner s = new Scanner(System.in);
+		name = s.nextLine();
+		System.out.println("Hey " +name +",");
+		do {
+		System.out.println("1.Dal fry - 40");
+		System.out.println("2.Paneer butter masala - 100");
+		System.out.println("3.Chicken curry - 120");
+		System.out.println("4.fish fry - 100");
+		System.out.println("5.tomato curry - 30");
+		System.out.println("Select from the menu");
+		int n = s.nextInt();
+		switch(n) {
+		case 1:System.out.println("enter quantity:");
+		q = s.nextInt();
+			System.out.println("you selected dal fry, pay" +(q*40) +"rs");
+		amt = s.nextInt();
+		if(amt == (q*40)) {
+			System.out.println("Order placed kindly wait");
+		}
+		else {
+			if(amt > (q*40)) {
+				System.out.println("Order placed kindly wait and collect your change of " +(amt-(q*40)) +" rupees");
+			}
+			else {
+			System.out.println("please pay " +((q*40)-amt) +"rs more");
+			amt2 = s.nextInt();
+			if(amt+amt2==(q*40)) {
+				System.out.println("order placed kindly wait");
+			}
+			else { 
+				if((amt+amt2)>(q*40)) {
+					System.out.println("Order placed kindly wait and collect your change of " +((amt+amt2)-(q*40)) +" rupees");
+				}
+				else {
+				System.out.println("Insufficient payment");
+			}
+			}
+		}
+		}
+		break;
+		case 2:System.out.println("enter quantity:");
+		q = s.nextInt();
+		System.out.println("you selected paneer butter masala, pay" +(q*100) +"rs");
+		amt = s.nextInt();
+		if(amt == (q*100)) {
+			System.out.println("Order placed kindly wait");
+		}
+		else {
+			if(amt > (q*100)) {
+				System.out.println("Order placed kindly wait and collect your change of " +(amt-(q*100)) +" rupees");
+			}
+			else {
+			System.out.println("please pay " +((q*100)-amt) +"rs more");
+			amt2 = s.nextInt();
+			if(amt+amt2==(q*100)) {
+				System.out.println("order placed kindly wait");
+			}
+			else { 
+				if((amt+amt2)>(q*100)) {
+					System.out.println("Order placed kindly wait and collect your change of " +((amt+amt2)-(q*100)) +" rupees");
+				}
+				else {
+				System.out.println("Insufficient payment");
+			}
+			}
+		}
+		}
+		break;
+		case 3:System.out.println("enter quantity:");
+		q = s.nextInt();
+		System.out.println("you selected chicken curry, pay" +(q*120) +"rs");
+		amt = s.nextInt();
+		if(amt == (q*120)) {
+			System.out.println("Order placed kindly wait");
+		}
+		else {
+			if(amt > (q*120)) {
+				System.out.println("Order placed kindly wait and collect your change of " +(amt-(q*120)) +" rupees");
+			}
+			else {
+			System.out.println("please pay " +((q*120)-amt) +"rs more");
+			amt2 = s.nextInt();
+			if(amt+amt2==(q*120)) {
+				System.out.println("order placed kindly wait");
+			}
+			else { 
+				if((amt+amt2)>(q*120)) {
+					System.out.println("Order placed kindly wait and collect your change of " +((amt+amt2)-(q*120)) +" rupees");
+				}
+				else {
+				System.out.println("Insufficient payment");
+			}
+			}
+		}
+		}
+		break;
+		case 4:System.out.println("enter quantity:");
+		q = s.nextInt();
+		System.out.println("you selected fish fry, pay" +(q*100) +"rs");
+		amt = s.nextInt();
+		if(amt == (q*100)) {
+			System.out.println("Order placed kindly wait");
+		}
+		else {
+			if(amt > (q*100)) {
+				System.out.println("Order placed kindly wait and collect your change of " +(amt-(q*100)) +" rupees");
+			}
+			else {
+			System.out.println("please pay " +((q*100)-amt) +"rs more");
+			amt2 = s.nextInt();
+			if(amt+amt2==(q*100)) {
+				System.out.println("order placed kindly wait");
+			}
+			else { 
+				if((amt+amt2)>(q*100)) {
+					System.out.println("Order placed kindly wait and collect your change of " +((amt+amt2)-(q*100)) +" rupees");
+				}
+				else {
+				System.out.println("Insufficient payment");
+			}
+			}
+		}
+		}
+		break;
+		case 5:System.out.println("enter quantity:");
+		q = s.nextInt();
+		System.out.println("you selected tomato curry, pay" +(q*30) +"rs");
+		amt = s.nextInt();
+		if(amt == (q*30)) {
+			System.out.println("Order placed kindly wait");
+		}
+		else {
+			if(amt > (q*30)) {
+				System.out.println("Order placed kindly wait and collect your change of " +(amt-(q*30)) +" rupees");
+			}
+			else {
+			System.out.println("please pay " +((q*30)-amt) +"rs more");
+			amt2 = s.nextInt();
+			if(amt+amt2==(q*30)) { 
+				System.out.println("order placed kindly wait");
+			}
+			else { 
+				if((amt+amt2)>(q*30)) {
+					System.out.println("Order placed kindly wait and collect your change of " +((amt+amt2)-(q*30)) +" rupees");
+				}
+				else {
+				System.out.println("Insufficient payment");
+			}
+			}
+		}
+		}
+		break;
+		default:System.out.println("Invalid choice");
+		}
+		System.out.println("do you want to add more items");
+		ch = s.next().charAt(0);
+		}while(ch == 'y');
+  System.out.println("THANK YOU VISIT AGAIN");
+	}
+
+}
